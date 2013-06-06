@@ -9,7 +9,8 @@ Usage
 ### NSArray
 
 Map:
-Returns an array made of the return value of each call to the block
+
+Returns an array made of the return value of each call to the block.
 
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -23,6 +24,8 @@ Returns an array made of the return value of each call to the block
 
 Join:
 
+Creates a string by joining the elements of an array with either a space or a separator.
+
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
 	[words join]; == @"funny little frog"
@@ -31,6 +34,8 @@ Join:
 	
 isEmpty:
 
+Returns true if the array has no elements and false if it has any.
+
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	[words isEmpty]; == NO
 	
@@ -38,6 +43,8 @@ isEmpty:
 	[noWords isEmpty]; == YES
 	
 any:
+
+Returns true if the array contains and elements passing the test in the block. Returns false if none pass the test.
 	
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -52,8 +59,10 @@ any:
 		
 		return [word isEqualToString:@"belle"];
 	}]; == NO
-	
+		
 select:
+
+Returns an array of the elements from an array that pass the test in the block.
 
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -71,6 +80,8 @@ select:
 	
 reject:
 
+Returns an array of any elements that fail the test in the blok.
+
 	NSArray *words = @[@"funny", @"little", @"frog"];
 
 	NSArray *selectedWords = [words select:^BOOL(id item) {
@@ -86,6 +97,8 @@ reject:
 	}]; == @[@"funny", @"little", @"frog"]
 	
 each:
+
+Executes a block for each element in an array.
 	
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -94,6 +107,8 @@ each:
 	}];
 	
 each_with_index:
+
+Executes a block for each element in an array and passed in the index of the element.
 	
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -105,6 +120,8 @@ each_with_index:
 ### NSNumber
 
 times:
+
+Executes the block however many times the number is equal to. Passes in the index of the current iteration.
 	
 	[@(4) times:^(int i) {
 		NSLog(@"This block will be called 4 times and will pass the count each time")
@@ -114,12 +131,16 @@ times:
 ### NSString
 
 join:
+
+Creates a new string by concatenating two strings with either a space or the specified separator.
 	
 	[[@"funny" join:@"little"] join:@"frog"]; == @"funny little frog"
 	
 	[[@"funny" join:@"little" with:@"-"] join:@"frog" with:@"-"]; == @"funny-little-frog";
 	
 isEmpty:
+
+Returns true if the length of the string is 0 and false if it's greater than 0.
 
 	NSString *text = @"";	
 	[text isEmpty]; == YES
@@ -128,6 +149,8 @@ isEmpty:
 	[text isEmpty]; == NO
 	
 chomp:
+
+Removes the specified string from the end of a string or removes \n if no string is specified.
 
 	NSString *text = @"funny little frog\n";
 	[text chomp]; == @"funny little frog"	
