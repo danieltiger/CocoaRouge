@@ -6,6 +6,18 @@ Ruby inspired categories to make Objective-C a little bit nicer to use.
 Usage
 =====
 
+### Lanaguage Constructs
+
+Unless:
+
+Equivalent to if-not, it runs the unless code if the conditional is false and the else if it's true.
+
+	unless (1 != 1) {
+		NSLog(@"This will be run because the conditional resolves to NO")
+	} else {
+		NSLog(@"This would be run if the conditional resolved to YES")
+	}
+
 ### NSArray
 
 Map:

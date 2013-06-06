@@ -7,9 +7,7 @@
 //
 
 #import "CocoaRougeTests.h"
-#import "NSArray+CocoaRouge.h"
-#import "NSNumber+CocoaRouge.h"
-#import "NSString+CocoaRouge.h"
+#import "CRCategories.h"
 
 
 @implementation CocoaRougeTests
@@ -27,6 +25,31 @@
     // Tear-down code here.
     
     [super tearDown];
+}
+
+
+- (void)testUnless
+{
+    __block BOOL ranUnless = NO;
+    
+    unless(1 != 1) {
+        ranUnless = YES;
+    }
+    STAssertTrue(ranUnless, @"1 does != 1");
+    
+    ranUnless = NO;
+    unless(1 == 1) {
+        ranUnless = YES;
+    }
+    STAssertFalse(ranUnless, @"1 does == 1");
+    
+    ranUnless = NO;
+    unless(1 == 1) {
+        ranUnless = NO;
+    } else {
+        ranUnless = YES;
+    }
+    STAssertTrue(ranUnless, @"else should be called if unless is false");
 }
 
 

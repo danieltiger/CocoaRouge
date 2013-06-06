@@ -8,6 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+
 @interface CocoaRougeTests : SenTestCase
 
 @end
