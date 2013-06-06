@@ -84,13 +84,13 @@ Returns an array of any elements that fail the test in the blok.
 
 	NSArray *words = @[@"funny", @"little", @"frog"];
 
-	NSArray *selectedWords = [words select:^BOOL(id item) {
+	NSArray *selectedWords = [words reject:^BOOL(id item) {
 		NSString *word = (NSString *)item;
 		
 		return [word isEqualToString:@"funny"];
 	}]; == @[@"little", @"frog"]
 	
-	selectedWords = [words select:^BOOL(id item) {
+	selectedWords = [words reject:^BOOL(id item) {
 		NSString *word = (NSString *)item;
 		
 		return [word isEqualToString:@"belle"];
