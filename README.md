@@ -203,7 +203,7 @@ Converts an NSString to a float
 	
 gsub:with:
 
-Replaces a matching string with the specified string.
+Replaces a matched string with the specified string.
 
-	[@"Adam" gsub:@"Adam" with:@"Help"]; == "Pete"
+	[@"Adam" gsub:@"Adam" with:@"Help"]; == "Help"
 	
