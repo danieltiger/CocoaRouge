@@ -17,9 +17,9 @@
 }
 
 
-- (NSString *)join:(NSString *)string with:(NSString *)seperator
+- (NSString *)join:(NSString *)string with:(NSString *)separator
 {
-    return [NSString stringWithFormat:@"%@%@%@", self, seperator, string];
+    return [NSString stringWithFormat:@"%@%@%@", self, separator, string];
 }
 
 
@@ -70,6 +70,18 @@
 - (NSString *)gsub:(NSString *)match with:(NSString *)replacement
 {
     return [self stringByReplacingOccurrencesOfString:match withString:replacement];
+}
+
+
+- (NSArray *)split
+{
+    return [self split:@" "];
+}
+
+
+- (NSArray *)split:(NSString *)separator
+{
+    return [self componentsSeparatedByString:separator];
 }
 
 @end

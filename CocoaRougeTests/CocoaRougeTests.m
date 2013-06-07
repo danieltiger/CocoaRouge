@@ -316,4 +316,29 @@
     STAssertTrue([[test gsub:@"Adam" with:@"Pete"] isEqualToString:@"Pete"], @"Adam should now equal Pete");
 }
 
+
+- (void)testStringSplit
+{
+    NSString *test = @"funny little frog";
+    
+    NSArray *splitTest = [test split];
+    STAssertTrue(splitTest.count == 3, @"There should be 3 elements in splitTest");
+    STAssertTrue([splitTest[1] isEqualToString:@"little"], @"The second element should be 'little'");
+}
+
+
+- (void)testStringSplitSeparator
+{
+    NSString *test = @"funny-little-frog";
+    
+    NSArray *splitTest = [test split:@"-"];
+    STAssertTrue(splitTest.count == 3, @"There should be 3 elements in splitTest");
+    STAssertTrue([splitTest[1] isEqualToString:@"little"], @"The second element should be 'little'");
+    
+    test = @"funny-little frog";
+    splitTest = [test split:@"-"];
+    STAssertTrue(splitTest.count == 2, @"There should be 2 elements in splitTest");
+    STAssertTrue([splitTest[1] isEqualToString:@"little frog"], @"The second element should be 'little frog'");
+}
+
 @end
