@@ -20,5 +20,6 @@
 - (NSString *)gsub:(NSString *)match with:(NSString *)replacement;
 - (NSArray *)split;
 - (NSArray *)split:(NSString *)separator;
+- (int)index:(NSString *)match;
 
 @end

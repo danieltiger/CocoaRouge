@@ -84,4 +84,13 @@
     return [self componentsSeparatedByString:separator];
 }
 
+
+- (int)index:(NSString *)match
+{
+    NSRange matchRange = [self rangeOfString:match];
+    if (matchRange.location == NSNotFound) return -1;
+    
+    return matchRange.location;
+}
+
 @end
