@@ -7,7 +7,7 @@
 //
 
 #import "CocoaRougeTests.h"
-#import "CRCategories.h"
+#import "CocoaRouge.h"
 
 
 @implementation CocoaRougeTests

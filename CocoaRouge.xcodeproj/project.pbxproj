@@ -22,7 +22,6 @@
 		07D7C10617605C1400AF58E6 /* NSNumber+CocoaRouge.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7C10417605C1400AF58E6 /* NSNumber+CocoaRouge.m */; };
 		07D7C10917605CFD00AF58E6 /* NSString+CocoaRouge.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7C10817605CFD00AF58E6 /* NSString+CocoaRouge.m */; };
 		07D7C10A17605CFD00AF58E6 /* NSString+CocoaRouge.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7C10817605CFD00AF58E6 /* NSString+CocoaRouge.m */; };
-		07F6A237176107CF009D2DBF /* CRCategories.h in Sources */ = {isa = PBXBuildFile; fileRef = 07F6A236176107B5009D2DBF /* CRCategories.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		07D7C10417605C1400AF58E6 /* NSNumber+CocoaRouge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CocoaRouge.m"; sourceTree = "<group>"; };
 		07D7C10717605CFD00AF58E6 /* NSString+CocoaRouge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CocoaRouge.h"; sourceTree = "<group>"; };
 		07D7C10817605CFD00AF58E6 /* NSString+CocoaRouge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CocoaRouge.m"; sourceTree = "<group>"; };
-		07F6A236176107B5009D2DBF /* CRCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCategories.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +161,6 @@
 		07D7C1011760590600AF58E6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				07F6A236176107B5009D2DBF /* CRCategories.h */,
 				07D7C0FD176058FF00AF58E6 /* NSArray+CocoaRouge.h */,
 				07D7C0FE176058FF00AF58E6 /* NSArray+CocoaRouge.m */,
 				07D7C10317605C1400AF58E6 /* NSNumber+CocoaRouge.h */,
@@ -283,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F6A237176107CF009D2DBF /* CRCategories.h in Sources */,
 				07D7C0F4176058A900AF58E6 /* CocoaRougeTests.m in Sources */,
 				07D7C100176058FF00AF58E6 /* NSArray+CocoaRouge.m in Sources */,
 				07D7C10617605C1400AF58E6 /* NSNumber+CocoaRouge.m in Sources */,

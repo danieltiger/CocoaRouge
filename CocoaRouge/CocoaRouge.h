@@ -6,7 +6,13 @@
 //  Copyright (c) 2013 Arik Devens. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSArray+CocoaRouge.h"
+#import "NSNumber+CocoaRouge.h"
+#import "NSString+CocoaRouge.h"
+
+
+#define unless(condition) if(!(condition))
+
 
 @interface CocoaRouge : NSObject
 
