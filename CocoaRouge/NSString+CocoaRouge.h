@@ -15,8 +15,6 @@
 - (NSString *)chomp;
 - (NSString *)chomp:(NSString *)string;
 - (NSNumber *)toNum;
-- (int)toInt;
-- (float)toFloat;
 - (NSString *)gsub:(NSString *)match with:(NSString *)replacement;
 - (NSArray *)split;
 - (NSArray *)split:(NSString *)separator;
