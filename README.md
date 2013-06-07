@@ -133,16 +133,31 @@ Executes a block for each element in an array and passed in the index of the ele
 
 times:
 
-Executes the block however many times the number is equal to. Passes in the index of the current iteration.
+Executes the block however many times the number is equal to.
 	
+	[@(4) times:{
+		NSLog(@"This block will be called 4 times.")
+	}];
+	
+
+timesWithIndex:
+
+Executes the block however many times the number is equal to. Passes in the index of the current iteration.
+
 	[@(4) times:^(int i) {
 		NSLog(@"This block will be called 4 times and will pass the count each time")
 	}];
 	
+toString:
+
+Converts an NSNumber to an NSString.
+
+	[@(42) toString]; == 42
+	
 
 ### NSString
 
-join:
+join: and join:with:
 
 Creates a new string by concatenating two strings with either a space or the specified separator.
 	
@@ -167,3 +182,26 @@ Removes the specified string from the end of a string or removes \n if no string
 	NSString *text = @"funny little frog\n";
 	[text chomp]; == @"funny little frog"	
 	[text chomp:@"frog"]; == @"funny little "
+
+toNum:
+
+Converts an NSString to an NSNumber.
+
+	[@"42" toNum]; == @(42)
+	
+toInt:
+
+Converts an NSString to an int
+
+	[@"42" toInt]; == 42
+	
+toFloat:
+
+Converts an NSString to a float
+
+	[@"42" toFloat]; == 4.2f
+	
+gsub:with:
+
+	[@"Adam" gsub:@"Adam" with:@"Help"]; == "Pete"
+	
