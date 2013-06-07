@@ -8,7 +8,7 @@ Usage
 
 ### Lanaguage Constructs
 
-Unless:
+unless()
 
 Equivalent to if (!conditional), it runs the unless code if the conditional is false and the else if it's true.
 
@@ -20,7 +20,7 @@ Equivalent to if (!conditional), it runs the unless code if the conditional is f
 
 ### NSArray
 
-Map:
+map:
 
 Returns an array made of the return value of each call to the block.
 
@@ -34,9 +34,9 @@ Returns an array made of the return value of each call to the block.
 	
 	mappedArray == @[@"yes", @"yes", @"yes"]
 
-Join:
+join and join:
 
-Creates a string by joining the elements of an array with either a space or a separator.
+Creates a string by joining the elements of an array with either whitespace or a separator.
 
 	NSArray *words = @[@"funny", @"little", @"frog"];
 	
@@ -44,7 +44,7 @@ Creates a string by joining the elements of an array with either a space or a se
 	[words join:@"-"]; == @"funnny-little-frog"
 	
 	
-isEmpty:
+isEmpty
 
 Returns true if the array has no elements and false if it has any.
 
@@ -148,7 +148,7 @@ Executes the block however many times the number is equal to. Passes in the inde
 		NSLog(@"This block will be called 4 times and will pass the count each time")
 	}];
 	
-toString:
+toString
 
 Converts an NSNumber to an NSString.
 
@@ -163,9 +163,9 @@ Creates a new string by concatenating two strings with either a space or the spe
 	
 	[[@"funny" join:@"little"] join:@"frog"]; == @"funny little frog"
 	
-	[[@"funny" join:@"little" with:@"-"] join:@"frog" with:@"-"]; == @"funny-little-frog";
+	[[@"funny" join:@"little" with:@"-"] join:@"frog" with:@"-"]; == @"funny-little-frog"
 	
-isEmpty:
+isEmpty
 
 Returns true if the length of the string is 0 and false if it's greater than 0.
 
@@ -175,7 +175,7 @@ Returns true if the length of the string is 0 and false if it's greater than 0.
 	NSString *text = @"funny little frog";
 	[text isEmpty]; == NO
 	
-chomp:
+chomp and chomp:
 
 Removes the specified string from the end of a string or removes \n if no string is specified.
 
@@ -183,19 +183,19 @@ Removes the specified string from the end of a string or removes \n if no string
 	[text chomp]; == @"funny little frog"	
 	[text chomp:@"frog"]; == @"funny little "
 
-toNum:
+toNum
 
 Converts an NSString to an NSNumber.
 
 	[@"42" toNum]; == @(42)
 	
-toInt:
+toInt
 
 Converts an NSString to an int
 
 	[@"42" toInt]; == 42
 	
-toFloat:
+toFloat
 
 Converts an NSString to a float
 
@@ -206,4 +206,11 @@ gsub:with:
 Replaces a matched string with the specified string.
 
 	[@"Adam" gsub:@"Adam" with:@"Help"]; == "Help"
+	
+split and split:
+
+Returns an array that divides the string by whitespace or the specified separator.
+
+	[@"funny little frog" split]; == @[@"funny", @"little", @"frog"]
+	[@"funny-little frog" split:@"-"]; == @[@"funny", @"little frog"]
 	
