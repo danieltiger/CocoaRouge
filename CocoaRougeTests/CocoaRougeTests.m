@@ -347,10 +347,10 @@
     NSString *test = @"funny little frog";
 
     int index = [test index:@"little"];
-    STAssertTrue(index == 6, @"The first occurance of 'little' is at index 6");
+    STAssertTrue(index == 6, @"The first occurence of 'little' is at index 6");
     
     index = [test index:@"belle"];
-    STAssertTrue(index == -1, @"There is no occurance of the string 'belle' in 'funny little frog'");
+    STAssertTrue(index == -1, @"There is no occurence of the string 'belle' in 'funny little frog'");
 }
 
 @end

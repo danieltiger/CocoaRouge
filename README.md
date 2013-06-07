@@ -214,3 +214,9 @@ Returns an array that divides the string by whitespace or the specified separato
 	[@"funny little frog" split]; == @[@"funny", @"little", @"frog"]
 	[@"funny-little frog" split:@"-"]; == @[@"funny", @"little frog"]
 	
+index:
+
+Returns the index of the first occurrence of a string in another string.
+
+	[@"funny little frog" index:@"little"]; == 6
+	[@"funny little frog" index:@"belle"]; == -1
