@@ -293,22 +293,6 @@
 }
 
 
-- (void)testStringToInt
-{
-    NSString *test = @"42";
-    
-    STAssertTrue([test toInt] == 42, @"Should convert '42' to an int that equals 42");
-}
-
-
-- (void)testStringToFloat
-{
-    NSString *test = @"4.2";
-    
-    STAssertTrue([test toFloat] == 4.2f, @"Should convert '4.2' to a float that equals 4.2");
-}
-
-
 - (void)testStringToGsub
 {
     NSString *test = @"Adam";

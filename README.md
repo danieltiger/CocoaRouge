@@ -188,19 +188,7 @@ toNum
 Converts an NSString to an NSNumber.
 
 	[@"42" toNum]; == @(42)
-	
-toInt
 
-Converts an NSString to an int
-
-	[@"42" toInt]; == 42
-	
-toFloat
-
-Converts an NSString to a float
-
-	[@"42" toFloat]; == 4.2f
-	
 gsub:with:
 
 Replaces a matched string with the specified string.

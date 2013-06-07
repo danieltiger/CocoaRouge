@@ -55,18 +55,6 @@
 }
 
 
-- (int)toInt
-{
-    return [[self toNum] intValue];
-}
-
-
-- (float)toFloat
-{
-    return [[self toNum] floatValue];
-}
-
-
 - (NSString *)gsub:(NSString *)match with:(NSString *)replacement
 {
     return [self stringByReplacingOccurrencesOfString:match withString:replacement];
