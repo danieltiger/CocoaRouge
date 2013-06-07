@@ -44,4 +44,32 @@
     return [self substringToIndex:self.length - string.length];
 }
 
+
+- (NSNumber *)toNum
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    return [formatter numberFromString:self];
+}
+
+
+- (int)toInt
+{
+    return [[self toNum] intValue];
+}
+
+
+- (float)toFloat
+{
+    return [[self toNum] floatValue];
+}
+
+
+- (NSString *)gsub:(NSString *)match with:(NSString *)replacement
+{
+    return [self stringByReplacingOccurrencesOfString:match withString:replacement];
+}
+
 @end

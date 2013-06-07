@@ -96,7 +96,7 @@
 
 - (void)eachWithIndex:(void (^)(id item, int index))block
 {
-    [@(self.count) times:^(int i) {
+    [@(self.count) timesWithIndex:^(int i) {
         id item = self[i];
         
         block(item, i);

@@ -9,6 +9,8 @@
 
 @interface NSNumber (CocoaRouge)
 
-- (void)times:(void (^)(int i))block;
+- (void)times:(void (^)(void))block;
+- (void)timesWithIndex:(void (^)(int i))block;
+- (NSString *)toString;
 
 @end

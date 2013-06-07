@@ -63,7 +63,7 @@
     
     STAssertTrue(mapped.count == 3, @"The mapped array should also have 3 objects");
     
-    [@(3) times:^(int i) {
+    [@(3) timesWithIndex:^(int i) {
         STAssertTrue([mapped[i] isEqualToString:@"yes"], @"Every item in mapped should be a string equal to yes");
     }];
 }
@@ -205,11 +205,29 @@
 {
     __block int numberOfTimes = 0;
     
-    [@(4) times:^(int i) {
+    [@(4) times:^(void) {
         numberOfTimes++;
     }];
     
     STAssertTrue(numberOfTimes == 4, @"After running 4 times the number should equal 4");
+}
+
+
+- (void)testNumberTimesWithIndex
+{
+    __block int numberOfTimes = 0;
+    
+    [@(4) timesWithIndex:^(int index) {
+        numberOfTimes += index;
+    }];
+    
+    STAssertTrue(numberOfTimes == 6, @"After running 4 times the number should equal 6");
+}
+
+
+- (void)testNumberToString
+{
+    STAssertTrue([[@(42) toString] isEqualToString:@"42"], @"@(42) should be converted to a string of '42'");
 }
 
 
@@ -264,6 +282,38 @@
     chompedTest = [test chomp:@"belle"];
     STAssertTrue([chompedTest isEqualToString:@"funny little frog"],
                  @"If a string is passed and it is not the end of the string nothing should be done");
+}
+
+
+- (void)testStringToNum
+{
+    NSString *test = @"42";
+    
+    STAssertTrue([[test toNum] isEqualToNumber:@(42)], @"Should convert '42' to @(42)");
+}
+
+
+- (void)testStringToInt
+{
+    NSString *test = @"42";
+    
+    STAssertTrue([test toInt] == 42, @"Should convert '42' to an int that equals 42");
+}
+
+
+- (void)testStringToFloat
+{
+    NSString *test = @"4.2";
+    
+    STAssertTrue([test toFloat] == 4.2f, @"Should convert '4.2' to a float that equals 4.2");
+}
+
+
+- (void)testStringToGsub
+{
+    NSString *test = @"Adam";
+    
+    STAssertTrue([[test gsub:@"Adam" with:@"Pete"] isEqualToString:@"Pete"], @"Adam should now equal Pete");
 }
 
 @end

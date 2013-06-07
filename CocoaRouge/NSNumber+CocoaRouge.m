@@ -11,11 +11,25 @@
 
 @implementation NSNumber (CocoaRouge)
 
-- (void)times:(void (^)(int i))block
+- (void)times:(void (^)(void))block
+{
+    for (int i = 0; i < self.intValue; i++) {
+        block();
+    }
+}
+
+
+- (void)timesWithIndex:(void (^)(int i))block
 {
     for (int i = 0; i < self.intValue; i++) {
         block(i);
     }
+}
+
+
+- (NSString *)toString
+{
+    return [NSString stringWithFormat:@"%@", self];
 }
 
 @end
