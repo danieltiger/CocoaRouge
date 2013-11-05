@@ -92,7 +92,7 @@ Returns an array of the elements from an array that pass the test in the block.
 	
 reject:
 
-Returns an array of any elements that fail the test in the blok.
+Returns an array of any elements that fail the test in the block.
 
 	NSArray *words = @[@"funny", @"little", @"frog"];
 
